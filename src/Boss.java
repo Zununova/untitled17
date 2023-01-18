@@ -1,17 +1,17 @@
 public class Boss extends GameEntity {
 
-    String weaponName;
-
-
-
+    Weapon weapon;
     public Boss(int health, int damage) {
         super(health, damage);
-
-
     }
-
-    public Boss(int health, int damage,  String weaponName) {
+    public Weapon getWeapon() {
+        return weapon;
+    }
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+    public Boss(int health, int damage, Weapon weapon) {
         super(health, damage);
-        this.weaponName = weaponName;
+        this.weapon = weapon;
     }
 }
